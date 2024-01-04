@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body {
+    background: #121212;
+}
+
+#container {
+    height: 50vh;
+    max-width: 33vW;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: #353535ef;
+    color: #eee;
+    box-shadow: 0 0 8px 2px #ffffff44;
+    padding: 6px;
+    border-radius: .25em;
+
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    row-gap: 0.2rem;
+    column-gap: 0.2rem;
+
+}
+
+/* quesata proprieta serve a far vedere il display su una riga sola della calcolatrice */
+#display {
+    grid-column: 1/ span 4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* questo serve per richiamare le eredità di un id */
+#container div {
+    background-color: #232232;
+    border-radius: 0.2rem;
+    box-shadow: 0.1rem 0.1rem #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* se si mette '!important' la regola avtra la priorita su qualsiasi cosa gli verra 
+applicata successivamente */
+#equal {
+    background-color: #4a9bad !important;
+    grid-column: span 2 ;
+}
